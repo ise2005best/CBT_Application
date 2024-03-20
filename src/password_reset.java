@@ -56,6 +56,12 @@ public class password_reset extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Hiragino Sans GB", 0, 14)); // NOI18N
         jLabel1.setText("Student Email");
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         jLabel2.setFont(new java.awt.Font("Hiragino Sans GB", 0, 14)); // NOI18N
         jLabel2.setText("New Password");
 
@@ -223,7 +229,7 @@ public class password_reset extends javax.swing.JFrame {
             sendNewPasswordToStudent();
             JOptionPane.showMessageDialog(rootPane, "Password has been reset successfully");
             new Admin_dashboard().setVisible(true);
-            new password_reset().setVisible(false);
+            dispose();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
         }
@@ -233,6 +239,10 @@ public class password_reset extends javax.swing.JFrame {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

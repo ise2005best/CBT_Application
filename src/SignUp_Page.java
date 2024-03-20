@@ -202,6 +202,7 @@ public class SignUp_Page extends javax.swing.JFrame {
             ps.setString(4, hashedPassword);
             int rs = ps.executeUpdate();
             new LogIn_Page().setVisible(true);
+            dispose();
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(rootPane, e);

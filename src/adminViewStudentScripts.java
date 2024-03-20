@@ -269,14 +269,14 @@ public class adminViewStudentScripts extends javax.swing.JFrame {
     }
 
     public void showQuestion() {
-        if (currentIndex < numberOfQuestions) {
+        if (currentIndex < questionsList.size()) {
             jLabel3.setText(questionNumber[currentIndex]);
             jLabel2.setText(questionsList.get(currentIndex).question);
             jRadioButton1.setText(questionsList.get(currentIndex).optionA);
             jRadioButton2.setText(questionsList.get(currentIndex).optionB);
             jRadioButton3.setText(questionsList.get(currentIndex).optionC);
             jRadioButton4.setText(questionsList.get(currentIndex).optionD);
-            String usersAnswer = questionsList.get(currentIndex).correctAnswer;
+            String usersAnswer = questionsList.get(currentIndex).usersAnswer;
             if (questionsList.get(currentIndex).optionA.equals(usersAnswer)) {
                 jRadioButton1.setSelected(true);
             } else if (questionsList.get(currentIndex).optionB.equals(usersAnswer)) {
@@ -286,7 +286,7 @@ public class adminViewStudentScripts extends javax.swing.JFrame {
             } else if (questionsList.get(currentIndex).optionD.equals(usersAnswer)) {
                 jRadioButton4.setSelected(true);
             }
-        } else if (currentIndex >= numberOfQuestions) {
+        } else if (currentIndex >= questionsList.size()) {
             JOptionPane.showMessageDialog(rootPane, "This is the end of the student scripts", "script", JOptionPane.DEFAULT_OPTION);
         }
     }
@@ -365,7 +365,7 @@ public class adminViewStudentScripts extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        new Admin_dashboard().setVisible(true);
-       new adminViewStudentScripts().setVisible(false);
+       dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

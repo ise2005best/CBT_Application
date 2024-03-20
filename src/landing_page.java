@@ -99,13 +99,14 @@ public class landing_page extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         new landing_page().setVisible(false);
+       
          new login_student().setVisible(true);
+           dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         new LogIn_Page().setVisible(true);
-        new landing_page().setVisible(false);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
