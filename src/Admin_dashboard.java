@@ -117,9 +117,8 @@ public class Admin_dashboard extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         firstname1 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        lastname1 = new javax.swing.JTextField();
+        dateOfBirth = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel15 = new javax.swing.JLabel();
         studentemail1 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
@@ -131,6 +130,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        lastname2 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -383,22 +383,26 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 .addGap(248, 248, 248)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(matric1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(firstname1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lastname1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(studentemail1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jRadioButton3)
-                                .addGap(67, 67, 67)
-                                .addComponent(jRadioButton4)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(45, 45, 45))
+                                .addComponent(matric1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(firstname1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(studentemail1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton3)
+                                        .addGap(67, 67, 67)
+                                        .addComponent(jRadioButton4)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(45, 45, 45))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lastname2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 811, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -424,15 +428,15 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(firstname1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastname1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
+                .addGap(35, 35, 35)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lastname2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(studentemail1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -994,10 +998,11 @@ public class Admin_dashboard extends javax.swing.JFrame {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 firstname1.setText(rs.getString("firstName"));
-                lastname1.setText(rs.getString("lastName"));
+                lastname2.setText(rs.getString("lastName"));
                 String formattedDate = rs.getString("dateOfBirth").substring(0, 15);
                 System.out.println(formattedDate);
 //                jDateChooser2.setDate(rs.getDate("dateOfBirth"));
+                dateOfBirth.setText(rs.getString("dateOfBirth"));
                 studentemail1.setText(rs.getString("email"));
                 String gender = rs.getString("Gender");
                 if (gender.equalsIgnoreCase("Male")) {
@@ -1006,6 +1011,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
                     jRadioButton4.setSelected(true);
                 }
                 jComboBox3.setSelectedItem(rs.getString("Year"));
+
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
@@ -1022,7 +1028,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
             int rs = ps.executeUpdate();
             JOptionPane.showMessageDialog(rootPane, "Records have been Deleted");
         } catch (Exception e) {
-
+            JOptionPane.showMessageDialog(rootPane, e);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -1181,12 +1187,12 @@ public class Admin_dashboard extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         new password_reset().setVisible(true);
-        new Admin_dashboard().setVisible(false);
+        dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         new adminViewStudentScripts().setVisible(true);
-        new Admin_dashboard().setVisible(false);
+        dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -1214,7 +1220,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
             String studentsYear = jComboBox2.getSelectedItem().toString();
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306" + "/CBT_TEST", "root", "damilOlamide14$");
-            PreparedStatement ps = con.prepareStatement("UPDATE studets SET firstName = ?, lastName = ?, dateOfBirth = ?,  Gender = ?, Year = ? WHERE matricNumber = ? ");
+            PreparedStatement ps = con.prepareStatement("UPDATE students SET firstName = ?, lastName = ?, dateOfBirth = ?,  Gender = ?, Year = ? WHERE matricNumber = ? ");
             ps.setString(1, studentFirstName);
             ps.setString(2, studentLastName);
             ps.setString(3, usersDateOfBirth.toString());
@@ -1246,12 +1252,12 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 FileWriter fileWriter = new FileWriter(jFileChooser3.getSelectedFile(), true);
                 CSVWriter csvWriter = new CSVWriter(fileWriter);
                 csvWriter.writeNext(new String[]{null, null});
-                for(int row = 0; row < jTable3.getRowCount(); row++){
+                for (int row = 0; row < jTable3.getRowCount(); row++) {
                     String[] data = new String[jTable3.getColumnCount()];
-                    for(int col = 0; col < jTable3.getColumnCount(); col++){
-                    data[col] = (String) jTable3.getValueAt(row, col);
+                    for (int col = 0; col < jTable3.getColumnCount(); col++) {
+                        data[col] = (String) jTable3.getValueAt(row, col);
                     }
-                                csvWriter.writeNext(data);
+                    csvWriter.writeNext(data);
                 }
                 csvWriter.close();
                 JOptionPane.showMessageDialog(rootPane, "The file has been saved successfully");
@@ -1263,7 +1269,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-         DefaultTableModel table = (DefaultTableModel) jTable2.getModel();
+        DefaultTableModel table = (DefaultTableModel) jTable2.getModel();
         int row = jTable2.getSelectedRow();
         table.removeRow(row);
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -1305,6 +1311,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField dateOfBirth;
     private javax.swing.JTextField firstname;
     private javax.swing.JTextField firstname1;
     private javax.swing.JButton jButton1;
@@ -1324,7 +1331,6 @@ public class Admin_dashboard extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox3;
     public static javax.swing.JComboBox<String> jComboBox4;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JFileChooser jFileChooser2;
     private javax.swing.JFileChooser jFileChooser3;
@@ -1400,7 +1406,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField lastname;
-    private javax.swing.JTextField lastname1;
+    private javax.swing.JTextField lastname2;
     public javax.swing.JTextField matric;
     public javax.swing.JTextField matric1;
     public javax.swing.JTextField studentemail;

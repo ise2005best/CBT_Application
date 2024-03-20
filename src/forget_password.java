@@ -180,6 +180,7 @@ public class forget_password extends javax.swing.JFrame {
             int rs = ps.executeUpdate();
             JOptionPane.showMessageDialog(rootPane, "Your password has been successfully changed");
             new LogIn_Page().setVisible(true);
+            dispose();
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(rootPane, e);

@@ -252,7 +252,7 @@ public class student_scripts extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void getTotalScore() {
-        for (int i = 0; i < numberOfQuestions; i++) {
+        for (int i = 0; i < questionsList.size(); i++) {
             totalScore += questionsList.get(i).questionScore;
         }
     }
@@ -314,7 +314,7 @@ public class student_scripts extends javax.swing.JFrame {
     }
 
     public void showQuestion() {
-        if (currentIndex < numberOfQuestions) {
+        if (currentIndex < questionsList.size()) {
             jLabel2.setText(questionNumber[currentIndex]);
             jLabel11.setText(questionsList.get(currentIndex).question);
             jRadioButton4.setText(questionsList.get(currentIndex).optionA);
@@ -339,7 +339,7 @@ public class student_scripts extends javax.swing.JFrame {
             }
 
             jLabel1.setText("Your total Score is " + totalScore + "/ " + numberOfQuestions);
-        } else if (currentIndex >= numberOfQuestions) {
+        } else if (currentIndex >= questionsList.size()) {
             JOptionPane.showMessageDialog(rootPane, "This is the end of your questions answered", "script", JOptionPane.DEFAULT_OPTION);
         }
     }

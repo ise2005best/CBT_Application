@@ -67,6 +67,7 @@ public class questions_page extends javax.swing.JFrame {
             String formattedTime = String.format("Time Remaining: %02d:%02d:%02d%n", 0, 0, 0);
             jLabel1.setText(formattedTime);
             JOptionPane.showMessageDialog(rootPane, "Time Up!! ", "Time Up!!", JOptionPane.INFORMATION_MESSAGE);
+            
         }
     }
 
@@ -88,7 +89,6 @@ public class questions_page extends javax.swing.JFrame {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 boolean result = rs.getBoolean("test-taken");
-                System.out.println(result);
                 if (result == false) {
                     AnotherClass();
                     studentsAnswers();
@@ -96,7 +96,7 @@ public class questions_page extends javax.swing.JFrame {
                     displayQuestions();
                 } else {
                     JOptionPane.showMessageDialog(rootPane, "You have sucessfully answered this test please exit");
-                    System.exit(0);
+                    dispose();
                 }
             }
         } catch (Exception e) {
@@ -266,7 +266,7 @@ public class questions_page extends javax.swing.JFrame {
                         .addGap(74, 74, 74)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(127, 127, 127)
+                                .addGap(207, 207, 207)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jButton1)
                                     .addComponent(jButton2)
@@ -318,7 +318,6 @@ public class questions_page extends javax.swing.JFrame {
                 questionsList.add(Arrays.copyOf(questionsForCBT, questionsForCBT.length));
 
                 Collections.shuffle(questionsList);
-
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
@@ -425,7 +424,7 @@ public class questions_page extends javax.swing.JFrame {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(senderEmail));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(usersEmail));
-            message.setSubject("Successfull Registration");
+            message.setSubject("View Score ");
             message.setText(
                     "        Here is your score on your recent test " + "!\n"
                     + "          Your Score :  " + totalScore + " / " + numberOfQuestions + "\n "
@@ -458,13 +457,13 @@ public class questions_page extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }
-    
-    public void addToStudentResultTable(){
+
+    public void addToStudentResultTable() {
         Admin_dashboard tableModels = new Admin_dashboard();
-         DefaultTableModel tableModel = (DefaultTableModel) tableModels.jTable3.getModel();
-         String totalScoreInString = Integer.toString(totalScore);
-         String [] data = {usersMatricNumber, totalScoreInString};
-         tableModel.addRow(data);
+        DefaultTableModel tableModel = (DefaultTableModel) tableModels.jTable3.getModel();
+        String totalScoreInString = Integer.toString(totalScore);
+        String[] data = {usersMatricNumber, totalScoreInString};
+        tableModel.addRow(data);
     }
 
     boolean[] selectedButtons = new boolean[numberOfQuestions];
@@ -562,11 +561,10 @@ public class questions_page extends javax.swing.JFrame {
             addToStudentScoreScirpts();
             sendStudentTestScore();
             addStudentScoreToCsv();
-            addToStudentScoreScirpts();
-            int option = JOptionPane.showConfirmDialog(rootPane, "Your total score is "+ totalScore +"\n"+"Click me to view your scripts", "View Scipts!", JOptionPane.DEFAULT_OPTION);
-            if(option == 0){
-               new student_scripts().setVisible(true);
-               new questions_page().setVisible(false);
+            int option = JOptionPane.showConfirmDialog(rootPane, "Your total score is " + totalScore + "\n" + "Click me to view your scripts", "View Scipts!", JOptionPane.DEFAULT_OPTION);
+            if (option == 0) {
+                dispose();
+                new student_scripts().setVisible(true);
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);

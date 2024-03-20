@@ -155,6 +155,7 @@ public class login_student extends javax.swing.JFrame {
                     questionPage.getUsersMatricNumber(email);
 //                    new login_student().setVisible(false);
                     new questions_page().setVisible(true);
+                    dispose();
                 }else{
                     JOptionPane.showMessageDialog(rootPane, "Incorrect password");
                 }

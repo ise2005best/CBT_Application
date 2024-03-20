@@ -238,7 +238,7 @@ public class LogIn_Page extends javax.swing.JFrame {
 //                        lginn.jLabel1.setText("Hello" + usersFirstName);
 //                    }
                     new Admin_dashboard().setVisible(true);
-                    new LogIn_Page().setVisible(false);
+                    dispose();
                 } else {
                     jLabel5.setText("Incorrect Password");
                 }
